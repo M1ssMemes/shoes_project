@@ -12,175 +12,177 @@
 <body>
     <nav class="navbar-wrapper">
         <div class="navbar-content">
-            <a class="main nav-link" href="index.html">Главная</a>
+            <a class="main nav-link"  asp-controller="Home" asp-action="Index">Главная</a>
             <a class="contacts nav-link" href="#contacts">Контакты</a>
         </div>
     </nav>
-    <div class="container">
-        <div class="content-row">
-            <div class="column-left">
-                <div class="preview-p2">
-                    <p class="shoes-p2">ПОДБОР ОБУВИ</p>
-                    <p class="please">
-                        Пожалуйста, постарайтесь отвечать на вопросы честно, чтобы <br> мы смогли подобрать для вас
-                        самую подходящую обувь.
-                    </p>
-                </div>
-                <div class="question-container">
-                    <div class="circle">
-                        <span class="anchor" id="section1"></span>
-                        <p></a> 1/4</p>
+    <form asp-controller ="Home" asp-action ="TestPage" method ="post">
+        <div class="container">
+            <div class="content-row">
+                <div class="column-left">
+                    <div class="preview-p2">
+                        <p class="shoes-p2">ПОДБОР ОБУВИ</p>
+                        <p class="please">
+                            Пожалуйста, постарайтесь отвечать на вопросы честно, чтобы <br> мы смогли подобрать для вас
+                            самую подходящую обувь.
+                        </p>
                     </div>
-                    <p class="question"> Выберите ваш пол:</p>
+                    <div class="question-container">
+                        <div class="circle">
+                            <span class="anchor" id="section1"></span>
+                            <p></a> 1/4</p>
+                        </div>
+                        <p class="question"> Выберите ваш пол:</p>
+                    </div>
+                    <div class="question-item">
+                        <label class="radio-group">
+                            <input class="selector" type="radio" name="sex" id="male" value="male">
+                            <img class="unmarked" src="/images/unmarked.svg" alt="">
+                            <img class="marked" src="/images/marked.svg" alt="">
+                            <span>Мужской</span>
+                        </label>
+                        <label class="radio-group">
+                            <input class="selector" type="radio" name="sex" id="female" value="female">
+                            <img class="unmarked" src="/images/unmarked.svg" alt="">
+                            <img class="marked" src="/images/marked.svg" alt="">
+                            <span>Женский</span>
+                        </label>
+                    </div>
                 </div>
-                <div class="question-item">
-                    <label class="radio-group">
-                        <input class="selector" type="radio" name="sex" id="male">
-                        <img class="unmarked" src="/images/unmarked.svg" alt="">
-                        <img class="marked" src="/images/marked.svg" alt="">
-                        <span>Мужской</span>
-                    </label>
-                    <label class="radio-group">
-                        <input class="selector" type="radio" name="sex" id="female">
-                        <img class="unmarked" src="/images/unmarked.svg" alt="">
-                        <img class="marked" src="/images/marked.svg" alt="">
-                        <span>Женский</span>
-                    </label>
+                <div class="column-right">
+                    <img src="/images/legs.svg" alt="" />
                 </div>
             </div>
-            <div class="column-right">
-                <img src="/images/legs.svg" alt="" />
+            <div class="scroll">
+                <div class="scroll-button">
+                    <a href="#section2"><img src="/images/scroll-down.svg" alt=""></a>
+                </div>
             </div>
-        </div>
-        <div class="scroll">
-            <div class="scroll-button">
-                <a href="#section2"><img src="/images/scroll-down.svg" alt=""></a>
+            <div class="line">
             </div>
-        </div>
-        <div class="line">
-        </div>
-        <div class="question-container-2">
-            <div class="circle">
-                <span class="anchor" id="section2"></span>
-                <p></a> 2/4</p>
+            <div class="question-container-2">
+                <div class="circle">
+                    <span class="anchor" id="section2"></span>
+                    <p></a> 2/4</p>
+                </div>
+                <p class="question"> Имеются ли у вас какие-либо деформации стоп?</p>
             </div>
-            <p class="question"> Имеются ли у вас какие-либо деформации стоп?</p>
-        </div>
-        <div class="question-item-2">
-            <label class="radio-group">
-                <input class="selector" type="radio" name="deformation" id="flat-feet">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>Плоскостопие (продольное/ поперечное)</span>
-            </label>
-            <label class="radio-group">
-                <input class="selector" type="radio" name="deformation" id="valgus">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>Вальгусная деформация</span>
-            </label>
-            <label class="radio-group">
-                <input class="selector" type="radio" name="deformation" id="No">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>Нет, у меня нет деформации стоп</span>
-            </label>
-        </div>
-        <div class="scroll">
-            <div class="scroll-button-2">
-                <a href="#section1"><img src="/images/scroll-up.svg" alt="" class="left-scroll"></a>
-                <a href="#section3"><img src="/images/scroll-down.svg" alt=""></a>
+            <div class="question-item-2">
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="deformation" id="flat-feet" value="flat-feet">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>Плоскостопие (продольное/ поперечное)</span>
+                </label>
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="deformation" id="valgus" value="valgus">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>Вальгусная деформация</span>
+                </label>
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="deformation" id="No" value="no-deformation">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>Нет, у меня нет деформации стоп</span>
+                </label>
             </div>
-        </div>
-        <div class="line">
-        </div>
-        <div class="question-container-2">
-            <div class="circle">
-                <span class="anchor" id="section3"></span>
-                <p>3/4</p>
+            <div class="scroll">
+                <div class="scroll-button-2">
+                    <a href="#section1"><img src="/images/scroll-up.svg" alt="" class="left-scroll"></a>
+                    <a href="#section3"><img src="/images/scroll-down.svg" alt=""></a>
+                </div>
             </div>
-            <p class="question"> Какой у вас тип темперамента?</p>
-        </div>
-        <div class="question-item-2">
-            <label class="radio-group">
-                <input class="selector" type="radio" name="temper" id="flegma">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>
-                    Флегматик (Вы неспешны, невозмутимы, имеете устойчивые стремления и настроение, внешне скупы на проявление
-                    чувств и эмоций)
-                </span>
-            </label>
-            <label class="radio-group">
-                <input class="selector" type="radio" name="temper" id="holeric">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>
-                    Холерик (Вы быстрый, страстный, порывистый, однако неуравновешенный, с резко меняющимся настроением с
-                    эмоциональными вспышками)
-                </span>
-            </label>
-            <label class="radio-group">
-                <input class="selector" type="radio" name="temper" id="sangvinic">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>
-                    Сангвиник (Вы живой, горячий, подвижный человек, с частой сменой настроения, впечатлений, с быстрой
-                    реакцией на все события, происходящие вокруг
-                    него, довольно легко примиряющийся со своими неудачами)
-                </span>
-            </label>
-            <label class="radio-group">
-                <input class="selector" type="radio" name="temper" id="melanholic">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>Меланхолик (Вы - человек легко ранимый, склонный к постоянному переживанию различных событий)</span>
-            </label>
-        </div>
-        <div class="scroll">
-            <div class="scroll-button-2">
-                <a href="#section2"><img src="/images/scroll-up.svg" alt="" class="left-scroll"></a>
-                <a href="#section4"><img src="/images/scroll-down.svg" alt=""></a>
+            <div class="line">
             </div>
-        </div>
-        <div class="line">
-        </div>
-        <div class="question-container-2">
-            <div class="circle">
-                <span class="anchor" id="section4"></span>
-                <p></a> 4/4</p>
+            <div class="question-container-2">
+                <div class="circle">
+                    <span class="anchor" id="section3"></span>
+                    <p>3/4</p>
+                </div>
+                <p class="question"> Какой у вас тип темперамента?</p>
             </div>
-            <p class="question"> Какой вариант кастомизации вы бы хотели применить?</p>
-        </div>
-        <div class="question-item-2">
-            <label class="radio-group">
-                <input class="selector" type="radio" name="castomisation" id="flat-feet">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>
-                    Базовый (включает в себя изменение: цвета ДВО и ДНО, выбор материалов верха обуви, варианты фурнитуры,
-                    рисунок ходовой поверхности подошвы)
-                </span>
-            </label>
-            <label class="radio-group">
-                <input class="selector" type="radio" name="castomisation" id="valgus">
-                <img class="unmarked" src="/images/unmarked.svg" alt="">
-                <img class="marked" src="/images/marked.svg" alt="">
-                <span>
-                    Ультра-уровень (продвинутый) (включает в себя все параметры изменений для базового уровня + вариант
-                    изготовления обуви повышенной полноты для использования ортопедических стелек на индивидуальной колодке) и
-                    изменения формы некоторых деталей, например союзки (она может быть составной или простой), форма
-                    подошвы.
-                </span>
-            </label>
-        </div>
-        <div class="scroll">
-            <div class="scroll-button-2">
-                <a href="#section3"><img src="/images/scroll-up.svg" alt="" class="left-scroll"></a>
+            <div class="question-item-2">
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="temper" id="flegma" value="flegma">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>
+                        Флегматик (Вы неспешны, невозмутимы, имеете устойчивые стремления и настроение, внешне скупы на проявление
+                        чувств и эмоций)
+                    </span>
+                </label>
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="temper" id="holeric" value="holeric">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>
+                        Холерик (Вы быстрый, страстный, порывистый, однако неуравновешенный, с резко меняющимся настроением с
+                        эмоциональными вспышками)
+                    </span>
+                </label>
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="temper" id="sangvinic" value="sangvinic">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>
+                        Сангвиник (Вы живой, горячий, подвижный человек, с частой сменой настроения, впечатлений, с быстрой
+                        реакцией на все события, происходящие вокруг
+                        него, довольно легко примиряющийся со своими неудачами)
+                    </span>
+                </label>
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="temper" id="melanholic" value ="melanholic">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>Меланхолик (Вы - человек легко ранимый, склонный к постоянному переживанию различных событий)</span>
+                </label>
             </div>
+            <div class="scroll">
+                <div class="scroll-button-2">
+                    <a href="#section2"><img src="/images/scroll-up.svg" alt="" class="left-scroll"></a>
+                    <a href="#section4"><img src="/images/scroll-down.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="line">
+            </div>
+            <div class="question-container-2">
+                <div class="circle">
+                    <span class="anchor" id="section4"></span>
+                    <p></a> 4/4</p>
+                </div>
+                <p class="question"> Какой вариант кастомизации вы бы хотели применить?</p>
+            </div>
+            <div class="question-item-2">
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="customisation" id="based" value="based">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>
+                        Базовый (включает в себя изменение: цвета ДВО и ДНО, выбор материалов верха обуви, варианты фурнитуры,
+                        рисунок ходовой поверхности подошвы)
+                    </span>
+                </label>
+                <label class="radio-group">
+                    <input class="selector" type="radio" name="customisation" id="advanced" value ="advanced">
+                    <img class="unmarked" src="/images/unmarked.svg" alt="">
+                    <img class="marked" src="/images/marked.svg" alt="">
+                    <span>
+                        Ультра-уровень (продвинутый) (включает в себя все параметры изменений для базового уровня + вариант
+                        изготовления обуви повышенной полноты для использования ортопедических стелек на индивидуальной колодке) и
+                        изменения формы некоторых деталей, например союзки (она может быть составной или простой), форма
+                        подошвы.
+                    </span>
+                </label>
+            </div>
+            <div class="scroll">
+                <div class="scroll-button-2">
+                    <a href="#section3"><img src="/images/scroll-up.svg" alt="" class="left-scroll"></a>
+                </div>
+            </div>
+            <button class="button button-end-2" input type ="submit" >Завершить</button>
         </div>
-        <button class="button button-end-2" onclick="@("window.location.href='" + @Url.Action("Result", "Home") + "'");">Завершить</button>
-    </div>
+    </form>
     <footer class="footer-wrapper">
         <div class="flex-container-center footer-content">
             <div>
