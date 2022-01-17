@@ -17,26 +17,26 @@ body {
 }
 
 img {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
 
 .container {
   width: 1260px;
   height: auto;
-  border-right: 3px solid #F2B9CC;
-  border-left: 3px solid #F2B9CC;
+  border-right: 3px solid #f2b9cc;
+  border-left: 3px solid #f2b9cc;
 }
 
 .navbar-wrapper {
   background-color: rgba(180, 190, 81, 0.4);
-  border-bottom: 3px solid #F2B9CC;
+  border-bottom: 3px solid #f2b9cc;
 }
 
 .navbar-content {
   width: 1260px;
-  border-right: 3px solid #F2B9CC;
-  border-left: 3px solid #F2B9CC;
+  border-right: 3px solid #f2b9cc;
+  border-left: 3px solid #f2b9cc;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
@@ -57,7 +57,7 @@ img {
   font-size: 40px;
   line-height: 53px;
   text-align: center;
-  color: #A1AE25;
+  color: #a1ae25;
 }
 
 .shoes-p2 {
@@ -66,7 +66,7 @@ img {
   font-weight: normal;
   font-size: 50px;
   text-align: left;
-  color: #A1AE25;
+  color: #a1ae25;
   margin-bottom: 0px;
 }
 
@@ -76,7 +76,7 @@ img {
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-  color: #7A7A7A;
+  color: #7a7a7a;
   padding-top: 17px;
   text-align: left;
 }
@@ -104,7 +104,7 @@ img {
   font-size: 20px;
   line-height: 24px;
   text-align: center;
-  color: #8B933A;
+  color: #8b933a;
 }
 
 .row-preview {
@@ -136,15 +136,14 @@ img {
 }
 
 .button {
-  background-color: #A1AE25;
+  background-color: #a1ae25;
   border-radius: 30px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   border: transparent;
-
 }
 
 .button-preview {
@@ -186,9 +185,8 @@ h3 {
   font-size: 34px;
   line-height: 45px;
   text-align: center;
-  color: #A1AE25;
+  color: #a1ae25;
 }
-
 
 ol {
   counter-reset: myCounter;
@@ -215,7 +213,7 @@ ol li::before {
   width: 61px;
   height: 61px;
   border-radius: 50%;
-  background: #FF6E9D;
+  background: #ff6e9d;
   font-size: 25px;
   line-height: 30px;
   margin-right: 30px;
@@ -230,7 +228,7 @@ ol li::before {
   width: 74px;
   border-radius: 50%;
   background-color: rgba(161, 174, 37, 0.5);
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   font-weight: normal;
   font-size: 27px;
@@ -251,7 +249,7 @@ ol li::before {
   margin-left: 570px;
   width: 82px;
   height: 0;
-  border: 1px solid #F7D2DE;
+  border: 1px solid #f7d2de;
   margin-bottom: 147px;
 }
 
@@ -335,11 +333,11 @@ ol li::before {
   display: flex;
 }
 
-.selector:checked~.marked {
+.selector:checked ~ .marked {
   display: block;
 }
 
-.selector:checked~.unmarked {
+.selector:checked ~ .unmarked {
   display: none;
 }
 
@@ -350,13 +348,11 @@ ol li::before {
 .scroll-button {
   margin-left: 800px;
   width: 52px;
-  
 }
 
 .scroll-button-2 {
   margin-left: 742px;
   display: flex;
-  
 }
 
 .left-scroll {
@@ -364,9 +360,8 @@ ol li::before {
   height: 52px;
 }
 
-
 .footer-wrapper {
-  background: linear-gradient(0deg, #F2B9CC 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(0deg, #f2b9cc 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .footer-content {
@@ -379,8 +374,8 @@ ol li::before {
   line-height: 21px;
   height: 647px;
   justify-content: flex-end;
-  border-right: 3px solid #F2B9CC;
-  border-left: 3px solid #F2B9CC;
+  border-right: 3px solid #f2b9cc;
+  border-left: 3px solid #f2b9cc;
   width: 1260px;
   margin-left: auto;
   margin-right: auto;
@@ -401,3 +396,75 @@ p {
 .rgy {
   margin-top: 45px;
 }
+
+.page3-preview {
+  text-align: center;
+  padding-top: 42px;
+}
+
+.page3-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #939f1a;
+}
+
+.page3-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  padding-top: 17px;
+  color: #a09f9f;
+}
+
+.shoes-choice-plus-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 44px 230px 0px 230px;
+}
+
+.picture-text {
+  width: 230px;
+}
+
+.picture-text img {
+  height: 170px;
+}
+
+.picture-text p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #494949;
+}
+
+.size-choice{
+  padding-top: 80px;
+  padding-left: 431px;
+  position: relative;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  
+  color: #7B8421;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: transparent;
+  border-bottom: 1px solid #AFAFAF;;
+}
+
+
