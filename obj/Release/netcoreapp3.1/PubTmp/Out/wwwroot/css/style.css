@@ -1,0 +1,568 @@
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts//Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    min-width: 1440px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1260px;
+    height: auto;
+    border-right: 3px solid #f2b9cc;
+    border-left: 3px solid #f2b9cc;
+}
+
+.navbar-wrapper {
+    background-color: rgba(180, 190, 81, 0.4);
+    border-bottom: 3px solid #f2b9cc;
+}
+
+.navbar-content {
+    width: 1260px;
+    border-right: 3px solid #f2b9cc;
+    border-left: 3px solid #f2b9cc;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.col-preview {
+    padding-top: 64px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.preview {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 53px;
+    text-align: center;
+    color: #a1ae25;
+}
+
+.shoes-p2 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    text-align: left;
+    color: #a1ae25;
+    margin-bottom: 0px;
+}
+
+.please {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #7a7a7a;
+    padding-top: 17px;
+    text-align: left;
+}
+
+.tag {
+    color: rgba(255, 110, 157, 0.7);
+}
+
+.main {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-right: 20px;
+}
+
+.contacts {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 20px;
+}
+
+.nav-link {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #8b933a;
+}
+
+.row-preview {
+    display: flex;
+    flex-direction: row;
+    padding-top: 76px;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 35px;
+    padding-left: 139px;
+    padding-right: 88px;
+    width: 100%;
+}
+
+.column-left {
+    padding-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.column-right {
+    padding-left: 88px;
+    flex: 0 0 300px;
+}
+
+.button {
+    background-color: #a1ae25;
+    border-radius: 30px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+    border: transparent;
+}
+
+.button-preview {
+    margin-top: 48px;
+    width: 232px;
+    height: 79px;
+    font-size: 23px;
+    line-height: 28px;
+}
+
+.button-start {
+    width: 259px;
+    height: 68px;
+    font-size: 17px;
+    line-height: 21px;
+    margin-top: 60px;
+}
+
+.button-next {
+    margin-top: 320px;
+    margin-left: 510px;
+    width: 240px;
+    height: 83px;
+    line-height: 20px;
+}
+
+.button-end-2 {
+    width: 240px;
+    height: 83px;
+    margin-top: 100px;
+    margin-left: 500px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.flex-container-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+h3 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 45px;
+    text-align: center;
+    color: #a1ae25;
+}
+
+ol {
+    counter-reset: myCounter;
+    margin-top: 100px;
+}
+
+li {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    list-style: none;
+}
+
+ol li::before {
+    content: counter(myCounter);
+    counter-increment: myCounter;
+    color: #000000;
+    display: inline-block;
+    text-align: center;
+    margin: 5px 10px;
+    line-height: 40px;
+    width: 61px;
+    height: 61px;
+    border-radius: 50%;
+    background: #ff6e9d;
+    font-size: 25px;
+    line-height: 30px;
+    margin-right: 30px;
+    padding-top: 14px;
+    margin-bottom: 40px;
+}
+
+.circle {
+    font-family: Montserrat;
+    font-style: normal;
+    height: 74px;
+    width: 74px;
+    border-radius: 50%;
+    background-color: rgba(161, 174, 37, 0.5);
+    color: #ffffff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 27px;
+    vertical-align: center;
+    line-height: 33px;
+    padding-top: 20px;
+}
+
+.anchor {
+    display: block;
+    height: 300px;
+    margin-top: -300px;
+    visibility: hidden;
+}
+
+.line {
+    margin-top: 70px;
+    margin-left: 570px;
+    width: 82px;
+    height: 0;
+    border: 1px solid #f7d2de;
+    margin-bottom: 147px;
+}
+
+.question-container {
+    display: flex;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.question-container-2 {
+    display: flex;
+    align-items: center;
+    margin-left: 139px;
+}
+
+.question {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    color: #666666;
+    margin: 0 0 0 19px;
+}
+
+.question-item {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #878787;
+    display: flex;
+    padding-left: 120px;
+    padding-top: 67px;
+}
+
+.question-item-2 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    display: block;
+    padding-left: 260px;
+    align-items: center;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-right: 54px;
+    padding-bottom: 31px;
+}
+
+    .radio-group:last-child {
+        margin-right: 0;
+    }
+
+.selector {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.marked {
+    display: none;
+    width: 52px;
+    height: 52px;
+    margin-right: 12px;
+}
+
+.unmarked {
+    display: block;
+    width: 52px;
+    height: 52px;
+    margin-right: 12px;
+}
+
+.selector:checked ~ .marked {
+    display: block;
+}
+
+.selector:checked ~ .unmarked {
+    display: none;
+}
+
+.scroll {
+    margin-top: 81px;
+}
+
+.scroll-button {
+    margin-left: 800px;
+    width: 52px;
+}
+
+.scroll-button-2 {
+    margin-left: 742px;
+    display: flex;
+}
+
+.left-scroll {
+    margin-right: 6px;
+    height: 52px;
+}
+
+.footer-wrapper {
+    background: linear-gradient(0deg, #f2b9cc 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.footer-content {
+    color: #000000;
+    margin-top: unset;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    height: 647px;
+    justify-content: flex-end;
+    border-right: 3px solid #f2b9cc;
+    border-left: 3px solid #f2b9cc;
+    width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item {
+    display: flex;
+}
+
+.contact-item-url {
+    margin-right: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+.rgy {
+    margin-top: 45px;
+}
+
+.page3-preview {
+    text-align: center;
+    padding-top: 42px;
+}
+
+.page3-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #939f1a;
+}
+
+.page3-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    padding-top: 17px;
+    color: #a09f9f;
+}
+
+.shoes-choice {
+    display: flex;
+    justify-content: space-between;
+    padding: 44px 230px 0px 230px;
+}
+
+.picture-text {
+    width: 230px;
+}
+
+    .picture-text img {
+        height: 170px;
+    }
+
+    .picture-text p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #494949;
+    }
+
+.model-selection {
+    padding-left: 280px;
+}
+
+.model-selector {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.marked-button {
+    display: none;
+    width: 160px;
+    height: 30px;
+    margin-right: 100px;
+}
+
+.unmarked-button {
+    display: block;
+    width: 160px;
+    height: 30px;
+    margin-right: 100px;
+}
+
+.model-selector:checked ~ .marked-button {
+    display: block;
+}
+
+.model-selector:checked ~ .unmarked-button {
+    display: none;
+}
+
+.size-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: left;
+    padding-left: 540px;
+    padding-top: 80px;
+    color: #939f1a;
+}
+
+.custom-select {
+    padding-top: 20px;
+    padding-left: 470px;
+    position: relative;
+    width: 310px;
+    height: 38px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #7B8421;
+}
+
+    .custom-select select {
+        display: none; /*hide original SELECT element:*/
+    }
+
+.select-selected {
+    background-color: rgba(255, 110, 157, 0.7);
+    border-bottom: 1px solid #AFAFAF;
+    width: 310px;
+}
+
+    /*style the arrow inside the select element:*/
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    /*point the arrow upwards when the select box is open (active):*/
+    .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+    }
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+    width: 310px;
+    /*background-color: rgba(255, 110, 157, 0.7);*/
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: transparent;
+    padding-top: 20px;
+    padding-left: 470px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(255, 154, 186, 0.28);
+}

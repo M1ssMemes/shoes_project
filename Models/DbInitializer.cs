@@ -9,7 +9,7 @@ namespace WebApplication1.Models
     {
         public static void Initialize(ApplicationContext context)
         {
-            //context.Database.EnsureDeleted();
+            context.Database.EnsureDeleted();
             if (!context.Database.EnsureCreated())
             {
                 return;
@@ -22,6 +22,33 @@ namespace WebApplication1.Models
             };
 
             context.Sexes.AddRange(sexs);
+
+            var sizes = new List<Size>
+            {
+                new Size {Value = "36"},
+                new Size {Value = "37"},
+                new Size {Value = "38"},
+                new Size {Value = "39"},
+                new Size {Value = "40"},
+                new Size {Value = "41"},
+                new Size {Value = "42"}
+            };
+
+            context.Sizes.AddRange(sizes);
+
+            var basemodels = new List<BaseModel>
+            {
+                new BaseModel {Type = "woman1"},
+                new BaseModel {Type = "woman2"},
+                new BaseModel {Type = "woman3"},
+                new BaseModel {Type = "man1"},
+                new BaseModel {Type = "man2"},
+                new BaseModel {Type = "man3"}
+            };
+
+            context.BaseModels.AddRange(basemodels);
+
+
 
             var deformations = new List<Deformation>
             {

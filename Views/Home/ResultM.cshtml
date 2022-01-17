@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>Project 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="~/css/style.css" runat="server"/>
+</head>
+
+<body>
+<nav class="navbar-wrapper">
+    <div class="navbar-content">
+        <a class="main nav-link" asp-controller="Home" asp-action="Index">Главная</a>
+        <a class="contacts nav-link" href="#contacts">Контакты</a>
+    </div>
+</nav>
+<form asp-controller="Home" asp-action="ResultM" method="post">
+    <div class="container">
+        <div class="page3-preview">
+            <div class="page3-title">Мы подобрали для Вас 3 вида обуви.</div>
+
+            <div class="page3-text">
+                Выберите одну из предложенных моделей для кастомизации, <br/>
+                а также размер обуви:
+            </div>
+        </div>
+        <div class="shoes-choice">
+            <div class="page3-item1">
+                <div class="picture-text">
+                    <img src="/images/shoesman/shoe-1.jfif" alt=""/>
+                    <p>Лоферы мужские</p>
+                </div>
+            </div>
+            <div class="page3-item2">
+                <div class="picture-text">
+                    <img src="/images/shoesman/shoe-2.jfif" alt=""/>
+                    <p>Полуботинки мужские в спортивном стиле</p>
+                </div>
+            </div>
+
+            <div class="page3-item3">
+                <div class="picture-text">
+                    <img src="/images/shoesman/shoe-3.jfif" alt=""/>
+                    <p>Полуботинки мужские модель «Дерби»</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="model-selection">
+            <label class="model-radio-group">
+                <input class="model-selector" type="radio" name="modeltype" value="man1">
+                <img class="unmarked-button" src="/images/unmarked-button.svg" alt="">
+                <img class="marked-button" src="/images/marked-button.svg" alt="">
+            </label>
+            <label class="model-radio-group">
+                <input class="model-selector" type="radio" name="modeltype" value="man2">
+                <img class="unmarked-button" src="/images/unmarked-button.svg" alt="">
+                <img class="marked-button" src="/images/marked-button.svg" alt="">
+            </label>
+            <label class="model-radio-group">
+                <input class="model-selector" type="radio" name="modeltype" value="man3">
+                <img class="unmarked-button" src="/images/unmarked-button.svg" alt="">
+                <img class="marked-button" src="/images/marked-button.svg" alt="">
+            </label>
+        </div>
+        <div class="size-text">
+            Размер:
+        </div>
+
+        <div class="custom-select">
+            <select name="sizechoice">
+                <option value="0">Выберите размер</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+            </select>
+        </div>
+
+        <div class="next-step-button">
+            <button class="button button-next">ПЕРЕЙТИ К <br> СЛЕДУЮЩЕМУ ШАГУ</button>
+        </div>
+        <script>
+            var x, i, j, l, ll, selElmnt, a, b, c;
+            /*look for any elements with the class "custom-select":*/
+            x = document.getElementsByClassName("custom-select");
+            l = x.length;
+            for (i = 0; i < l; i++) {
+                selElmnt = x[i].getElementsByTagName("select")[0];
+                ll = selElmnt.length;
+                /*for each element, create a new DIV that will act as the selected item:*/
+                a = document.createElement("DIV");
+                a.setAttribute("class", "select-selected");
+                a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                x[i].appendChild(a);
+                /*for each element, create a new DIV that will contain the option list:*/
+                b = document.createElement("DIV");
+                b.setAttribute("class", "select-items select-hide");
+                for (j = 1; j < ll; j++) {
+                    /*for each option in the original select element,
+                    create a new DIV that will act as an option item:*/
+                    c = document.createElement("DIV");
+                    c.innerHTML = selElmnt.options[j].innerHTML;
+                    c.addEventListener("click",
+                        function(e) {
+                            /*when an item is clicked, update the original select box,
+                            and the selected item:*/
+                            var y, i, k, s, h, sl, yl;
+                            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                            sl = s.length;
+                            h = this.parentNode.previousSibling;
+                            for (i = 0; i < sl; i++) {
+                                if (s.options[i].innerHTML == this.innerHTML) {
+                                    s.selectedIndex = i;
+                                    h.innerHTML = this.innerHTML;
+                                    y = this.parentNode.getElementsByClassName("same-as-selected");
+                                    yl = y.length;
+                                    for (k = 0; k < yl; k++) {
+                                        y[k].removeAttribute("class");
+                                    }
+                                    this.setAttribute("class", "same-as-selected");
+                                    break;
+                                }
+                            }
+                            h.click();
+                        });
+                    b.appendChild(c);
+                }
+                x[i].appendChild(b);
+                a.addEventListener("click",
+                    function(e) {
+                        /*when the select box is clicked, close any other select boxes,
+                        and open/close the current select box:*/
+                        e.stopPropagation();
+                        closeAllSelect(this);
+                        this.nextSibling.classList.toggle("select-hide");
+                        this.classList.toggle("select-arrow-active");
+                    });
+            }
+
+            function closeAllSelect(elmnt) {
+                /*a function that will close all select boxes in the document,
+                except the current select box:*/
+                var x, y, i, xl, yl, arrNo = [];
+                x = document.getElementsByClassName("select-items");
+                y = document.getElementsByClassName("select-selected");
+                xl = x.length;
+                yl = y.length;
+                for (i = 0; i < yl; i++) {
+                    if (elmnt == y[i]) {
+                        arrNo.push(i);
+                    } else {
+                        y[i].classList.remove("select-arrow-active");
+                    }
+                }
+                for (i = 0; i < xl; i++) {
+                    if (arrNo.indexOf(i)) {
+                        x[i].classList.add("select-hide");
+                    }
+                }
+            }
+
+            /*if the user clicks anywhere outside the select box,
+            then close all select boxes:*/
+            document.addEventListener("click", closeAllSelect);
+        </script>
+    </div>
+</form>
+<footer class="footer-wrapper">
+    <div class="flex-container-center footer-content">
+        <div>
+            <div class="contact-item">
+                <a name="contacts"
+                   class="contact-item-url"
+                   href="https://vk.com/medvedeva94">
+                    <img src="/images/vk.svg" alt=""/>
+                </a>
+                <a class="contact-item-url"
+                   href="https://www.instagram.com/olyamedvedeva">
+                    <img src="/images/inst.svg" alt=""/>
+                </a>
+                <p>Project by Olga Medvedeva</p>
+            </div>
+            <div class="contact-item">
+                <a class="contact-item-url" href="https://vk.com/missmemes">
+                    <img src="/images/vk.svg" alt=""/>
+                </a>
+                <a class="contact-item-url"
+                   href="https://www.instagram.com/m1ss_memes">
+                    <img src="/images/inst.svg" alt=""/>
+                </a>
+                <p>Programmed by Anastasya Sokolova</p>
+            </div>
+            <div class="contact-item">
+                <a class="contact-item-url" href="https://vk.com/sophame">
+                    <img src="/images/vk.svg" alt=""/>
+                </a>
+                <a class="contact-item-url"
+                   href="https://www.instagram.com/sopha.izmaylova">
+                    <img src="/images/inst.svg" alt=""/>
+                </a>
+                <p>Designed by Sophia Izmaylova</p>
+            </div>
+        </div>
+        <p class="rgy">
+            РГУ им. А.Н.Косыгина<br/>
+            (Технологии. Дизайн. Искусство) <br/>
+            г. Москва
+        </p>
+        <p>Medvedeva2509@gmail.com</p>
+        <p>2021</p>
+    </div>
+</footer>
+</body>
+</html>

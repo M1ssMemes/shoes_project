@@ -16,6 +16,9 @@ namespace WebApplication1.Models
         public DbSet<CustomType> CustomTypes { get; set; }
         public DbSet<Deformation> Deformations { get; set; }
         public DbSet<TestResults> TestResults { get; set; }
+        public DbSet<Size> Sizes { get; set; }
+        public DbSet<BaseModel> BaseModels { get; set; }
+        public DbSet<ChosenModel> ChosenModels { get; set; }
 
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
