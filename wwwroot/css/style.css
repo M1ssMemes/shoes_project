@@ -449,12 +449,15 @@ p {
   padding-top: 80px;
   padding-left: 431px;
   position: relative;
+  width: 310px;
+  height: 38px;
 
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
+  background: rgba(255, 110, 157, 0.7);
   
   color: #7B8421;
 }

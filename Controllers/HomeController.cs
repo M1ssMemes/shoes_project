@@ -67,7 +67,6 @@ namespace WebApplication1.Controllers
             _applicationContext.SaveChanges();
             
 
-           // RedirectToActionResult redirectResult = new RedirectToActionResult("Result", "Home", null);
             return RedirectToAction("Result", "Home");
         }
 
