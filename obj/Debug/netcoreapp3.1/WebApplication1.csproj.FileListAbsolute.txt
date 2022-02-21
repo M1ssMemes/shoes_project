@@ -74,7 +74,6 @@ C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\obj\Debug\net
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.csproj.AssemblyReference.cache
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
@@ -203,3 +202,6 @@ C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\net
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\wwwroot\images\shoesman\HDT-Installer.exe
+C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Debug\netcoreapp3.1\wwwroot\images\shoesman\Hearthstone-Setup.exe
+C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.csproj.AssemblyReference.cache

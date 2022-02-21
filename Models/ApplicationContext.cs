@@ -19,6 +19,7 @@ namespace WebApplication1.Models
         public DbSet<Size> Sizes { get; set; }
         public DbSet<BaseModel> BaseModels { get; set; }
         public DbSet<ChosenModel> ChosenModels { get; set; }
+        public DbSet<ColorPallet> ColorPallets { get; set; }
 
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)

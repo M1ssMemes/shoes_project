@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using WebApplication1.Models;
 
@@ -22,9 +23,35 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public IActionResult LastPage()
+        public IActionResult LastPage(int id)
         {
-            return View();
+            var chosenModels = _applicationContext.ChosenModels
+                .Include(chosenModel => chosenModel.BaseModel)
+                .Include(chosenModel => chosenModel.TestResults)
+                .ThenInclude(testResults => testResults.CustomType)
+                .Include(chosenModel => chosenModel.TestResults)
+                .ThenInclude(testResults => testResults.Sex)
+                .Include(chosenModel => chosenModel.TestResults)
+                .ThenInclude(testResults => testResults.Temperament)
+                .Include(chosenModel => chosenModel.TestResults)
+                .ThenInclude(testResults => testResults.Deformation)
+                .Include(chosenModel => chosenModel.Size).ToList();
+
+            
+
+            var resultData = chosenModels.Find(s => s.ID == id); var results = new ResultsFromDb()
+            {
+                IdTest = resultData.TestResults.ID.ToString(),
+                SexResult = resultData.TestResults.Sex.UserFriendlyInfo,
+                DeformationResult = resultData.TestResults.Deformation.UserFriendlyInfo,
+                TemperResult = resultData.TestResults.Temperament.UserFriendlyInfo,
+                CustomTypeResult = resultData.TestResults.CustomType.UserFriendlyInfo,
+                ShoeModelResult = resultData.BaseModel.Type,
+                SizeResult = resultData.Size.Value
+            };
+
+
+            return View(results);
         }
 
         public IActionResult TestPage()
@@ -133,7 +160,9 @@ namespace WebApplication1.Controllers
             _applicationContext.ChosenModels.Add(chosenModel);
             _applicationContext.SaveChanges();
 
-            return RedirectToAction("LastPage", "Home");
+            var idModel = chosenModel.ID;
+
+            return RedirectToAction("LastPage", "Home", new {id});
         }
 
 

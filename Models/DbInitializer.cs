@@ -17,8 +17,8 @@ namespace WebApplication1.Models
 
             var sexs = new List<Sex>
             {
-                new Sex {Value = "male"},
-                new Sex {Value = "female"}
+                new Sex {Value = "male", UserFriendlyInfo = "мужской"},
+                new Sex {Value = "female", UserFriendlyInfo = "женский"}
             };
 
             context.Sexes.AddRange(sexs);
@@ -48,32 +48,39 @@ namespace WebApplication1.Models
 
             context.BaseModels.AddRange(basemodels);
 
+            var colorpallets = new List<ColorPallet>
+            {
+                new ColorPallet {Temperament = "flegma"},
+                new ColorPallet {Temperament = "holeric"},
+                new ColorPallet {Temperament = "sangvinic"},
+                new ColorPallet {Temperament = "melanholic"}
+            };
 
+            context.ColorPallets.AddRange(colorpallets);
 
             var deformations = new List<Deformation>
             {
-                new Deformation {Value = "flat-feet"},
-                new Deformation {Value = "valgus"},
-                new Deformation {Value = "no-deformation"}
+                new Deformation {Value = "flat-feet", UserFriendlyInfo = "плоскостопие"},
+                new Deformation {Value = "valgus", UserFriendlyInfo = "вальгусная деформация"},
+                new Deformation {Value = "no-deformation", UserFriendlyInfo = "нет деформации"}
             };
 
             context.Deformations.AddRange(deformations);
 
             var temperaments = new List<Temperament>
             {
-                new Temperament {Value = "flegma"},
-                new Temperament {Value = "holeric"},
-                new Temperament {Value = "sangvinic"},
-                new Temperament {Value = "melanholic"}
+                new Temperament {Value = "flegma", UserFriendlyInfo = "флегматик"},
+                new Temperament {Value = "holeric", UserFriendlyInfo = "холерик"},
+                new Temperament {Value = "sangvinic", UserFriendlyInfo = "сангвиник"},
+                new Temperament {Value = "melanholic", UserFriendlyInfo = "меланхолик"}
             };
 
             context.Temperaments.AddRange(temperaments);
 
             var customtype = new List<CustomType>
             {
-                new CustomType{Value = "based"},
-                new CustomType{Value = "advanced"}
-
+                new CustomType{Value = "based", UserFriendlyInfo = "базовый"},
+                new CustomType{Value = "advanced", UserFriendlyInfo = "продвинутый"}
             };
 
             context.CustomTypes.AddRange(customtype);
