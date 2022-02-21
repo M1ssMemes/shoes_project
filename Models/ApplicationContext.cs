@@ -28,7 +28,6 @@ namespace WebApplication1.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           // modelBuilder.Entity<Sex>().ToTable("Sexes");
         }
 
 

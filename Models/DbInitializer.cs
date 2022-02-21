@@ -9,7 +9,7 @@ namespace WebApplication1.Models
     {
         public static void Initialize(ApplicationContext context)
         {
-            context.Database.EnsureDeleted();
+            //context.Database.EnsureDeleted();
             if (!context.Database.EnsureCreated())
             {
                 return;

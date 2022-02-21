@@ -166,3 +166,5 @@ C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Release\n
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Release\netcoreapp3.1\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Release\netcoreapp3.1\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Release\netcoreapp3.1\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Release\netcoreapp3.1\wwwroot\images\shoesman\HDT-Installer.exe
+C:\Users\memes\Desktop\homework\rgu\4\kyrsach\back\WebApplication1\bin\Release\netcoreapp3.1\wwwroot\images\shoesman\Hearthstone-Setup.exe
